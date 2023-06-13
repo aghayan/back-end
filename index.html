@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div id="user_info">
+			<h2>Registration:</h2>
+			<div id="input_block">
+				<label for="username">User name:</label>
+					<input type="text" id="userName">
+
+				<label for="lastname">Last name:</label>
+					<input type="text" id="lastName">
+
+				<label for="age">Age:</label>
+					<input type="number" id="age">
+
+				<button  id="go" onclick="getUser()">Submit</button>
+			</div>
+		</div>
+		<table id="table">
+	
+		</table>
+
+		<div class="input-cont search-cont">
+			<label for="search">Search</label>
+			<div class="search-input-cont">
+				<input type="text" id="search" placeholder="Search..." min="10" max="100">
+				<button id="search-button">Search<i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+				<span id="text"></span>
+			</div>
+		</div><br>
+	</div>
+	<div class="sort">
+		<button class="sort_users" onclick="sortByName()">Sort by Name</button>
+		<button class="sort_users" onclick="sortByAge()">Sort by Age</button>
+	</div>
+
+	<div id="progress-bar" class="progress-bar">
+		<div class="progress"></div>
+		<div class="progress-text"></div>
+	</div>
+	
+			
+	<script src="response.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

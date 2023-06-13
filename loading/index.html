@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>	
+	<style>
+		.progress-bar {
+		width: 200px;
+		height:	25px;
+		position: relative;
+		border: 1px solid #ccc;
+		display: flex;
+		align-items: flex-end;
+		margin: 0 auto;
+		margin-top: 50px;
+	  }
+	  
+	  .progress {
+		height: 100%;
+		background-color: #337ab7;
+	  }
+	  
+	  .progress-text {
+		font-family: fantasy;
+		font-size: 30px;
+		text-shadow: 1px 0px 5px;
+		color: #4949a1;
+		position: absolute;
+		top: -35px;
+		width: 100%;
+		text-align: center;
+	  }
+		
+		</style>
+
+	<div class="progress-bar">
+		<div class="progress"></div>
+		<div class="progress-text"></div>
+	</div> 
+	
+	<script>
+		
+		function simulateLoading() {
+		  let progress = 1;
+		  let progressBar = document.querySelector('.progress');
+		  let progressText = document.querySelector('.progress-text');
+
+		  let intervalId = setInterval(() => {
+			progressBar.style.width = `${progress}%`;
+			progressText.textContent = `${progress}%`;
+			progress++;
+
+			if (progress > 100) {
+			  clearInterval(intervalId);
+			}
+		  }, 300);
+		}
+
+simulateLoading();
+		
+	</script>
+</body>
+</html>
